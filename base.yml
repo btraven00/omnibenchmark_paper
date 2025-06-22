@@ -9,18 +9,21 @@ software_environments:
     conda: envs/clustbench.yml
     apptainer: envs/clustbench.sif
     envmodule: clustbench
+
   fcps:
     description: "CRAN's FCPS"
     conda: envs/fcps.yml
     apptainer: envs/fcps.sif
     envmodule: fcps
+
 metric_collectors:
   - id: plotting
     name: "Single-backend metric collector."
     software_environment: "fcps"
     repository:
       url: https://github.com/imallona/clustering_report
-      commit: bbb9d56
+      # commit: 1d6bdf5
+      commit: 167e221
     inputs:
       - metrics.scores
     outputs:
