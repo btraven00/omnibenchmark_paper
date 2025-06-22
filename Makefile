@@ -9,7 +9,7 @@ OB_CMD=ob run benchmark --continue-on-error --local --cores ${MAX_CORES} --task-
 BASE=base.yml
 CONDA=conda
 ORAS=oras
-ENVS=easybuild
+ENVS=envmodules
 
 .SILENT: generate
 
@@ -26,7 +26,7 @@ run_with_default_conda:
 	cp Clustering_${CONDA}.yml $$OUT
 
 run_with_unpinned_oras:
-	@OUT=out_${ORAS}_$$(date +'%Y%m%d%H%M') && \
+	@OUT=out_apptainer_$$(date +'%Y%m%d%H%M') && \
 	${OB_CMD} -b Clustering_${ORAS}.yml --out-dir $$OUT && \
 	cp Clustering_${ORAS}.yml $$OUT
 
