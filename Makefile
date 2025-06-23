@@ -22,16 +22,16 @@ generate:
 all: run_with_default_conda run_with_unpinned_oras run_with_default_envs # knit_report
 
 run_with_default_conda:
-	@OUT=out_${CONDA}_$$(date +'%Y%m%d%H%M') && \
+	@OUT=out_${CONDA}-$$(date +'%Y%m%d%H%M') && \
 	${OB_CMD} -b Clustering_${CONDA}.yml --out-dir $$OUT && \
 	cp Clustering_${CONDA}.yml $$OUT
 
 run_with_unpinned_oras:
-	@OUT=out_apptainer_$$(date +'%Y%m%d%H%M') && \
+	@OUT=out_apptainer-$$(date +'%Y%m%d%H%M') && \
 	${OB_CMD} -b Clustering_${ORAS}.yml --out-dir $$OUT && \
 	cp Clustering_${ORAS}.yml $$OUT
 
 run_with_default_envs:
-	@OUT=out_${ENVS}_$$(date +'%Y%m%d%H%M') && \
+	@OUT=out_${ENVS}-$$(date +'%Y%m%d%H%M') && \
 	${OB_CMD} -b Clustering_${ENVS}.yml --out-dir $$OUT && \
 	cp Clustering_${ENVS}.yml $$OUT
