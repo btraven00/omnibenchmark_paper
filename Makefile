@@ -16,6 +16,7 @@ ENVS=envmodules
 generate:
 	${YQ_MERGE} overrides/${CONDA}.yml ${BASE} > Clustering_${CONDA}.yml
 	${YQ_MERGE} overrides/${ORAS}.yml ${BASE} > Clustering_${ORAS}.yml
+	${YQ_MERGE} overrides/${ENVS}.yml ${BASE} > Clustering_${ENVS}.yml
 
 
 all: run_with_default_conda run_with_unpinned_oras run_with_default_envs # knit_report
