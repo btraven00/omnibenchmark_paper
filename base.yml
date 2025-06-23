@@ -8,14 +8,14 @@ software_environments:
     description: "clustbench on py3.12.6"
     conda: envs/clustbench.yml
     # apptainer: envs/clustbench.sif
-    apptainer: oras://quay.io/omnibenchmark/clustbench-vanilla:0.1.0
+    apptainer: oras://quay.io/omnibenchmark/clustbench-vanilla:0.1.2
     envmodule: clustbench
 
   fcps:
     description: "CRAN's FCPS"
     conda: envs/fcps.yml
     # apptainer: envs/fcps.sif
-    apptainer: oras://quay.io/omnibenchmark/fcps:0.1.1
+    apptainer: oras://quay.io/omnibenchmark/fcps:0.1.2
     envmodule: fcps
 
 metric_collectors:
