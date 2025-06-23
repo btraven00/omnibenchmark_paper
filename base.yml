@@ -190,7 +190,8 @@ stages:
           #url: https://github.com/imallona/clustbench_genieclust
           #commit: 6090043
           # Pending PR: https://github.com/imallona/clustbench_genieclust/pull/1
-          commit: bf39d3c
+          commit: 98b2ecd
+ 
         parameters:
           - values: ["--method", "genie", "--gini_threshold", 0.5, "-seed", 554]
           - values: ["--method", "genie", "--gini_threshold", 0.5, "-seed", 123]
